@@ -2,7 +2,7 @@
 
 Negozio di computer a Roma — riparazioni, assistenza, vendita e recupero dati a prezzi onesti.
 
-> 🚀 **Demo live:** [https://jryahia.github.io/h2s/](https://jryahia.github.io/h2s/) — hosted on GitHub Pages
+> <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> **Demo live:** [https://jryahia.github.io/h2s/](https://jryahia.github.io/h2s/) — hosted on GitHub Pages
 
 ![H2S Computer — anteprima](https://github.com/jryahia/h2s/raw/main/preview.png)
 
@@ -30,8 +30,8 @@ HTML5 · CSS3 · JavaScript (vanilla) — zero framework, zero dipendenze
 
 ## Contatti attività
 
-- 📞 +39 06 780 9614
-- 📍 Via Assisi 95A, Roma 00181
+- <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> +39 06 780 9614
+- <svg style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Via Assisi 95A, Roma 00181
 
 ---
 
