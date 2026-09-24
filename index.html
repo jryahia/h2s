@@ -301,6 +301,7 @@ footer{background:var(--ink);color:#cdc5b7;padding-block:var(--s-6) var(--s-4)}
 </style>
 </head>
 <body>
+<div class="gl-amb" aria-hidden="true"></div>
 
 <a class="skip" href="#main">Vai al contenuto</a>
 
@@ -736,9 +737,12 @@ footer{background:var(--ink);color:#cdc5b7;padding-block:var(--s-6) var(--s-4)}
             kw.appendChild(wi); frag.appendChild(kw);
           });
         } else if (k.nodeType === 1) {
-          if (k.tagName === 'SVG') { frag.appendChild(k); return; }
+          if (k.tagName.toLowerCase() === 'svg') { frag.appendChild(k); return; }
           if (k.children.length === 0) {
-            walk(k, k);
+            var inner = document.createDocumentFragment();
+            walk(k, inner);
+            k.textContent = '';
+            k.appendChild(inner);
             frag.appendChild(k);
           } else {
             var kw = document.createElement('span'); kw.className = 'kw';
@@ -787,5 +791,27 @@ footer{background:var(--ink);color:#cdc5b7;padding-block:var(--s-6) var(--s-4)}
 @media(max-width:480px){#wa-float span{display:none}#wa-float{padding:15px;border-radius:50%}}
 @media(max-width:620px){#wa-float{bottom:84px}}
 </style>
+<!-- GLASS LAYER v1 -->
+<style>
+:root{--gl-a:249,115,22;--gl-a2:234,88,12;--gl-surf:rgba(255,255,255,.5);--gl-surf-2:rgba(255,255,255,.7);--gl-bd:rgba(36,31,26,.1);--gl-bd-hi:rgba(249,115,22,.45);--gl-hl:rgba(255,255,255,.75);--gl-nav:rgba(250,246,238,.62);--gl-sh:rgba(36,31,26,.28);--gl-r:28px;--gl-ease:cubic-bezier(.34,1.56,.64,1);--gl-out:cubic-bezier(.22,1,.36,1)}
+@supports(transition-timing-function:linear(0,1)){:root{--gl-ease:linear(0,.009,.035 2.1%,.141,.281 6.7%,.723 12.9%,.938 16.7%,1.017,1.077,1.121,1.149 24.3%,1.159,1.163,1.161,1.154 29.9%,1.129 32.8%,1.051 39.6%,1.017 43.1%,.991,.977 51%,.974 53.8%,.975 57.1%,.997 69.8%,1.003 76.9%,1)}}
+::selection{background:rgba(249,115,22,.28)}
+.gl-amb{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(42vmax 42vmax at 10% 6%,rgba(249,115,22,0.1),transparent 62%),radial-gradient(38vmax 38vmax at 92% 38%,rgba(234,88,12,0.09),transparent 60%),radial-gradient(36vmax 36vmax at 24% 96%,rgba(249,115,22,0.05),transparent 60%)}
+.svc,.panel,.pricecard,.rev{background-color:var(--gl-surf);background-image:radial-gradient(380px circle at var(--mx,50%) var(--my,-40%),rgba(249,115,22,.13),transparent 65%);border:1px solid var(--gl-bd);-webkit-backdrop-filter:blur(12px) saturate(140%);backdrop-filter:blur(12px) saturate(140%);box-shadow:inset 0 1px 0 var(--gl-hl),0 18px 40px -28px var(--gl-sh);transition:opacity .7s ease,transform .6s var(--gl-ease),border-color .3s var(--gl-out),background-color .3s var(--gl-out),box-shadow .45s var(--gl-out)}
+.svc:hover,.panel:hover,.pricecard:hover,.rev:hover{background-color:var(--gl-surf-2);border-color:var(--gl-bd-hi);box-shadow:inset 0 1px 0 var(--gl-hl),0 0 0 1px rgba(249,115,22,.12),0 26px 60px -26px rgba(249,115,22,.5)}
+.btn{transition:transform .55s var(--gl-ease),box-shadow .35s var(--gl-out),background-color .3s var(--gl-out),border-color .3s var(--gl-out),color .2s,filter .3s}
+.btn:active{transition-duration:.12s}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid rgb(249,115,22);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.svc,.panel,.pricecard,.rev,.btn{transition-duration:.01ms}}
+.nav{background:rgba(250,246,238,.68);-webkit-backdrop-filter:saturate(150%) blur(18px);backdrop-filter:saturate(150%) blur(18px)}
+.svc,.panel,.rev{border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);background-color:rgba(255,253,247,.66)}
+.pricecard{border:2.5px solid var(--ink);box-shadow:8px 8px 0 var(--ink);background-color:rgba(255,253,247,.72)}
+.svc:hover{border-color:var(--ink);box-shadow:8px 10px 0 var(--ink)}
+.panel:hover,.rev:hover{border-color:var(--ink);box-shadow:7px 8px 0 var(--ink)}
+.pricecard:hover{border-color:var(--ink);box-shadow:10px 12px 0 var(--ink)}
+.btn-ghost{background-color:rgba(255,253,247,.6);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+</style>
+<script>(function(){if(!matchMedia('(pointer:fine)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;var S=".svc,.panel,.pricecard,.rev",q=0,ev;document.addEventListener('pointermove',function(e){ev=e;if(q)return;q=requestAnimationFrame(function(){q=0;var t=ev.target,el=t&&t.closest?t.closest(S):null;if(!el)return;var r=el.getBoundingClientRect();el.style.setProperty('--mx',(ev.clientX-r.left)+'px');el.style.setProperty('--my',(ev.clientY-r.top)+'px')})},{passive:true})})();</script>
+<!-- /GLASS LAYER v1 -->
 </body>
 </html>
